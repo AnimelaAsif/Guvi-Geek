@@ -1,5 +1,5 @@
-FROM openjdk:11
+FROM tomcat
 
-COPY target/webapp-0.0.1-SNAPSHOT.war webapp-guvi-geek.war
+COPY target/webapp-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapps/webapp-guvi-geek.war
 
-ENTRYPOINT ["java", "-jar", "webapp-guvi-geek.war"]
+ENTRYPOINT ["java", "-jar", "/usr/local/tomcat/webapps/webapp-guvi-geek.war"]
