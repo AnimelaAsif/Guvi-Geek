@@ -2,7 +2,7 @@ node{
     
     stage("Git Clone"){
 
-        git credentialsId: 'GIT_HUB_CREDENTIALS', url: 'https://github.com/AnimelaAsif/Guvi-Geek.git'
+       sh 'git credentialsId: 'GIT_HUB_CREDENTIALS', url: 'https://github.com/AnimelaAsif/Guvi-Geek.git'
     }
     
     stage('maven Build'){
